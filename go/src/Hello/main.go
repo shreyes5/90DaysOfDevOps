@@ -1,41 +1,33 @@
 package main
+
 import "fmt"
 
-// func main(){
-// 	fmt.Println("Hello 90 days of devops")
-// }
-
-// func main(){
-// 	var challenge = "#90daysofdevops!"
-// 	const totaldays = 90
-// 	var dayscomplete = 11
-// 	fmt.Println("Welcome to", challenge, "")
-// 	fmt.Println("This is a", totaldays, "day challenge")
-// 	fmt.Println("You have completed", dayscomplete, "days")
-// }
-
-func main(){
-	const DaysTotal int = 90
+func main() {
+	challenge := "#90DaysOfDevOps"
+	const daystotal int = 90
 	var remainingDays uint = 90
-	challenge := "#90daysofdevops"
-	
-	fmt.Printf("Welcome to the %v challenge. \nThis challenege consists of %v days\n", challenge, DaysTotal)
 
-	var TwitterName string
-	var DaysCompleted uint
+	// fmt.Println("Welcome to", challenge, "")
+	// fmt.Println("This is a", daystotal, "challenge and you have completed", dayscompleted, "days")
+	// fmt.Println("Keep going, you are doing great!")
 
-	fmt.Println("Enter your twitter handle:")
-	fmt.Scanln(&TwitterName)
+	fmt.Printf("Welcome to %v days, this challenge consists of %v days\n", challenge, daystotal)
 
-	fmt.Println("How many days have you completed?")
-	fmt.Scanln(&DaysCompleted)
+	var name string
+	var daysDone uint
 
+	fmt.Println("Enter your name:")
+	fmt.Scanln(&name)
 
-	remainingDays = remainingDays - DaysCompleted
+	fmt.Println("How many days have you completed?:")
+	fmt.Scanln(&daysDone)
 
-	fmt.Printf("You have %v days more to go! Lets go strong %v YOU GOT THIS!!!\n" , remainingDays, TwitterName)
+	remainingDays = remainingDays - daysDone
 
+	fmt.Printf("This is a %v days challenge and you have completed %v days\n", daystotal, daysDone)
+	fmt.Printf("You have %v days remaining\n", remainingDays)
+	fmt.Println("Lessgo")
 
-	// the below line gives us the memory address of the pointer
-	fmt.Println(&challenge)
+	fmt.Println(challenge)
+	fmt.Println(&challenge) //& points to the memory address of the variable challenge
 }
